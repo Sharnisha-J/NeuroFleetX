@@ -1,0 +1,977 @@
+/* App.css - Additional styles for new features */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #4a6fa5, #2c3e50);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.auth-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.auth-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.auth-form {
+  padding: 30px;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4a6fa5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4a6fa5, #2c3e50);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-toggle {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.form-toggle span {
+  color: #4a6fa5;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  background: linear-gradient(135deg, #2c3e50, #4a6fa5);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-content > div > h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header-content > div > p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.nav-tab {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.logout-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.home-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+              url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%234a6fa5" opacity="0.1"/><path d="M0 0L100 100" stroke="%234a6fa5" stroke-width="1" opacity="0.2"/><path d="M100 0L0 100" stroke="%234a6fa5" stroke-width="1" opacity="0.2"/></svg>');
+  padding: 60px 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.features-section {
+  margin-bottom: 50px;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: #4a6fa5;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Fleet Management Styles */
+.fleet-section {
+  width: 100%;
+}
+
+.fleet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.fleet-header h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.add-vehicle-btn {
+  background: linear-gradient(135deg, #4a6fa5, #2c3e50);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-vehicle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.export-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.export-btn {
+  background: #0bb56d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.export-btn:hover {
+  background: #0aa05f;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.vehicle-header h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.status-chip {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-available {
+  background-color: #e6f7ee;
+  color: #0bb56d;
+}
+
+.status-in-use {
+  background-color: #e6f0ff;
+  color: #2c6fde;
+}
+
+.status-maintenance {
+  background-color: #fef0e6;
+  color: #e67e22;
+}
+
+.vehicle-type {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.vehicle-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.detail-row .label {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-row .value {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.healthy {
+  color: #0bb56d;
+}
+
+.due {
+  color: #e67e22;
+}
+
+.critical {
+  color: #e74c3c;
+}
+
+.battery-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.battery-level {
+  width: 60px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 2px;
+  position: relative;
+}
+
+.battery-level:before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 6px;
+  width: 3px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 0 2px 2px 0;
+}
+
+.battery-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff4d4d, #ffa64d, #0bb56d);
+  transition: width 0.5s;
+}
+
+.battery-percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.vehicle-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.action-btn.edit {
+  background: #e6f0ff;
+  color: #2c6fde;
+}
+
+.action-btn.edit:hover {
+  background: #d0e2ff;
+}
+
+.action-btn.delete {
+  background: #fee6e6;
+  color: #e74c3c;
+}
+
+.action-btn.delete:hover {
+  background: #fcd0d0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.modal .form-group {
+  margin-bottom: 15px;
+}
+
+.modal .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.modal .form-group input,
+.modal .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modal-actions button:first-child {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.modal-actions button:last-child {
+  background: #4a6fa5;
+  color: white;
+}
+
+.home-footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Map Section Styles */
+.map-section {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.map-header h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.vehicle-selector select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+.map-container {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mini-map {
+  height: 300px !important;
+}
+
+.selected-vehicle-info {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.selected-vehicle-info h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Optimization Section Styles */
+.optimization-section {
+  width: 100%;
+}
+
+.optimization-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.optimization-form {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-row .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-row .form-group input,
+.form-row .form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.optimize-button {
+  background: linear-gradient(135deg, #4a6fa5, #2c3e50);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.optimize-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.optimization-result {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.optimization-result h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.result-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.result-card h4 {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-card p {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.route-visualization h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Maintenance Section Styles */
+.maintenance-section {
+  width: 100%;
+}
+
+.maintenance-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.maintenance-overview {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.maintenance-stats {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.maintenance-stats h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-value.healthy {
+  color: #0bb56d;
+}
+
+.stat-value.due {
+  color: #e67e22;
+}
+
+.stat-value.critical {
+  color: #e74c3c;
+}
+
+.maintenance-chart {
+  margin-top: 30px;
+}
+
+.maintenance-chart h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.pie-chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.pie-segment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.maintenance-list {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.maintenance-list h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.vehicle-health-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vehicle-health-table th,
+.vehicle-health-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.vehicle-health-table th {
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.health-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.health-fill {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff4d4d, #ffa64d, #0bb56d);
+  min-width: 50px;
+}
+
+.health-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.health-status.healthy {
+  background-color: #e6f7ee;
+  color: #0bb56d;
+}
+
+.health-status.due {
+  background-color: #fef0e6;
+  color: #e67e22;
+}
+
+.health-status.critical {
+  background-color: #fee6e6;
+  color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-tabs {
+    justify-content: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fleet-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .vehicle-selector select {
+    width: 100%;
+  }
+  
+  .map-section {
+    height: auto;
+    min-height: 500px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .maintenance-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .vehicle-health-table {
+    font-size: 0.8rem;
+  }
+}
